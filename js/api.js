@@ -1,0 +1,105 @@
+const numtarjeta = document.querySelector('#numtarjeta');
+const nombre = document.querySelector('#nombre');
+const fechaex = document.querySelector('#fechaex');
+const codigo = document.querySelector('#codigo');
+
+
+const btnEnviar = document.querySelector('#btnEnviar');
+
+cargarEventos();
+
+function cargarEventos(){
+    btnEnviar.addEventListener('click', (e)=>{
+        e.preventDefault()
+
+    const numero=document.querySelector('.num').value
+    numeroValido=validarNumero(numero)
+    if(!numeroValido){
+        alert('Debes escribir los 15 dígitos de tu tarjeta')
+        numero.focus()
+        return
+    }
+
+    const nombre=document.querySelector('.nom').value
+    nombreValido=validarNombre(nombre)
+    if(nombreValido){
+        alert('Debes de escribir tu nombre')
+        nombre.focus()
+        return
+    }
+
+    const fecha=document.querySelector('.fecha').value
+    fechaValida=validarfecha(fecha)
+    if(!fechaValida){
+        alert('Debes de escribir la fecha de expiracion válida')
+        fecha.focus()
+        return
+    }
+    
+    const codigo=document.querySelector('.cod').value
+    codigoValida=validarcodigo(codigo)
+    if(!codigoValida){
+        alert('Debes de escribir el codigo de seguridad válido')
+        codigo.focus()
+        return
+    }
+    alert('Todo bien')
+    enviarDatos();
+})
+
+function validarNumero(num) {
+    if(num.length>14 && num.length<16)
+        return true
+    else
+        return false
+    }
+
+    function validarNombre(nom){
+        if(nom==='')
+            return true
+        else
+            return false
+    }
+
+    function validarfecha(f){
+        if(f.length>4 && f.length<6)
+            return true
+        else
+            return false
+    }
+
+    function validarcodigo(c){
+        if(c.length>3 && c.length<5)
+            return true
+        else
+            return false
+    }
+}
+            
+
+function enviarDatos(){
+
+    url = `http://localhost:4000/api/pagos`;
+
+    fetch(url,{
+                method: 'POST',
+
+                headers: { "Content-Type": "application/json", },
+
+                body: JSON.stringify({
+                    numtarjeta:numtarjeta.value,
+                    nombre:nombre.value,
+                    fechaex:fechaex.value,
+                    codigo:codigo.value
+                })
+
+        })
+        .then( respuesta => {
+            console.log('Hubo respuesta')
+            return respuesta.json();
+        } )
+        .then( resultado => {
+            console.log(resultado)
+            alert(resultado.mensaje);
+        })
+}
