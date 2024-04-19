@@ -8,110 +8,100 @@
   <link rel="preload" href="css/estilos.css">
   <title>Formulario pago</title>
 </head>
-<header class="header">
-    <nav class="barra">
-        <!-- COMIENZA MENU HAMBURGUEZA OCULTO -->
-        <label for="inp-amb">
-            <img src="img/icon-menu.png" class="menu-amb">
-            <img src="img/cerrar-menu.png" class="cerrar-amb">
-        </label>
-        <input type="checkbox" id="inp-amb" checked hidden><!-- CHECADA POR DEFECTO -->
-        <!-- FINALIZA MENU HAMBURGUEZA OCULTO -->
-        <div class="logo">
-            <a href="index.html"><img class="logo" src="img/logo.jpg"></a>
-        </div>
-        <div class="menu">
-            <a href="#">MEZCAL</a>
-            <a href="#">CREMAS</a>
-            <a href="#">CONTACTO</a>
-            <a href="#">SOBRE NOSOTROS</a>
-        </div>
-        <div class="login">
-            <h1>Guarú Mezcal</h1>
-            <a href="login.html"><img src="img/usuario.png"></a>
-        </div>
-    
-</header>
 <body class="cuerpo">
-    <form class="formulario">
-        <div class="izq">
-            <p>Ingresa los datos de la tarjeta</p>
-        <div class="form-register">
+  <header class="header">
+    <nav class="barra">
+      <!-- COMIENZA MENU HAMBURGUEZA OCULTO -->
+      <label for="inp-amb" class="menu-amb">
+          <img src="img/icon-menu.png" class="menu-amb-icon">
+          <img src="img/cerrar-menu.png" class="cerrar-amb">
+      </label>
+      <input type="checkbox" id="inp-amb" checked hidden><!-- CHECADA POR DEFECTO -->
+      <!-- FINALIZA MENU HAMBURGUEZA OCULTO -->
+      <div class="logo">
+          <a href="index.html"><img class="logo-img" src="img/logo.jpg"></a>
+      </div>
+      <div class="menu">
+          <a href="#">MEZCAL</a>
+          <a href="#">CREMAS</a>
+          <a href="#">CONTACTO</a>
+          <a href="#">SOBRE NOSOTROS</a>
+      </div>
+      <div class="login">
+          <h1>Guarú Mezcal</h1>
+          <a href="login.html"><img src="img/usuario.png"></a>
+      </div>
+    </nav>
+  </header>
+  <form class="formulario">
+    <div class="izq">
+      <p>Ingresa los datos de la tarjeta</p>
+      <div class="form-register">
         <input class="controls num" name="numtarjeta" id="numtarjeta"  placeholder="Número de tarjeta">
         <input class="controls nom" name="nombre" id="nombre" placeholder="Nombre y Apellido">
         <input class="controls fecha" name="fechaex" id="fechaex" placeholder="Fecha de Expiracion">
         <input class="controls cod" name="codigo" id="codigo" placeholder="Código de seguridad">
-            <a href="https://giselregalado.github.io/ConfirmarCompra/">
-            <button href="https://giselregalado.github.io/ConfirmarCompra/" class="btnEnv" id="btnEnviar">Continuar</button>
-            </a>
-        </div>
-        </div>
-        <div class="resumen">
-
-            <div class="compra">
-                <p>Resumen de compra</p>
-            </div>
-            <div class="linea"></div>
-        
-            <div class="espacio">
-                <div class="derecha">
-                    <p>Productos</p>
-                    <p>Envío</p>
-                    <div class="linea2"></div>
-                    <p>Pagas</p>
-                </div>
-                        
-                <div class="izquierda">
-                    <p>$5000.00</p>
-                    <p>Gratis</p>
-                    <div class="linea2"></div>
-                    <p>$5000.00</p>
-                </div>
-            </div>
-           
-        </div>
-</form>
-</body>
-<div class="abajo">
+        <button class="btnEnv" id="btnEnviar">Continuar</button>
+      </div>
+    </div>
+    <div class="resumen">
+      <div class="compra">
+          <p>Resumen de compra</p>
+      </div>
+      <div class="linea"></div>
+      <div class="espacio">
+          <div class="derecha">
+              <p>Productos</p>
+              <p>Envío</p>
+              <div class="linea2"></div>
+              <p>Pagas</p>
+          </div>
+          <div class="izquierda">
+              <p>$5000.00</p>
+              <p>Gratis</p>
+              <div class="linea2"></div>
+              <p>$5000.00</p>
+          </div>
+      </div>
+    </div>
+  </form>
+  <div class="abajo">
     <p>Pagas:</p>
     <p>$5000.00</p>
+  </div>
+  <footer class="footer">
+    <div class="logo-f">
+        <a href="index.html"><img src="img/logo.jpg" width="120px"></a>
     </div>
-
-    <footer class="footer">
-        <div class="logo-f">
-            <a href="index.html"><img src="img/logo.jpg" width="120px"></a>
-        </div>
-        <div class="redes-s">
-            <a href="#"><img src="img/facebook.png" width="25px"></a>
-        </div>
-        <div class="listas">
-            <ul class="ul1">
-                <li >MEZCAL</li>
-                <li class="sub-li"><a href="#">Mezcal Joven</a></li>
-                <li class="sub-li"><a href="#">Mezcal Reposado</a></li>
-                <li class="sub-li"><a href="#">Mezcal Añejo</a></li>
-                <li class="sub-li"><a href="#">MEzcal Maduro</a></li>
-            </ul>
-            <ul class="ul2">
-                <li>CREMAS</li>
-                <li class="sub-li"><a href="#">Conócelas</a></li>
-                <li class="sub-li"><a href="#">Sabores</a></li>
-            </ul>
-            <ul class="ul3">
-                <li>CONTACTO</li>
-                <li class="sub-li"><a href="#">regalado.vero@gmail.com</a></li>
-                <li class="sub-li"><a href="#">443-371-0116</a></li>
-            </ul>
-            <ul class="ul4">
-                <li>SOBRE NOSOTROS</li>
-                <li class="sub-li"><a href="#">Morelia, México</a></li>
-                <li class="sub-li"><a href="#">¿Quiénes somos?</a></li>
-                <li class="sub-li"><a href="#">Misión y visión</a></li>
-            </ul>
-
-        </div>
-        
-        
-    </footer>
-<script src="js/api.js"></script>
+    <div class="redes-s">
+        <a href="#"><img src="img/facebook.png" width="25px"></a>
+    </div>
+    <div class="listas">
+        <ul class="ul1">
+            <li>MEZCAL</li>
+            <li class="sub-li"><a href="#">Mezcal Joven</a></li>
+            <li class="sub-li"><a href="#">Mezcal Reposado</a></li>
+            <li class="sub-li"><a href="#">Mezcal Añejo</a></li>
+            <li class="sub-li"><a href="#">Mezcal Maduro</a></li>
+        </ul>
+        <ul class="ul2">
+            <li>CREMAS</li>
+            <li class="sub-li"><a href="#">Conócelas</a></li>
+            <li class="sub-li"><a href="#">Sabores</a></li>
+        </ul>
+        <ul class="ul3">
+            <li>CONTACTO</li>
+            <li class="sub-li"><a href="#">regalado.vero@gmail.com</a></li>
+            <li class="sub-li"><a href="#">443-371-0116</a></li>
+        </ul>
+        <ul class="ul4">
+            <li>SOBRE NOSOTROS</li>
+            <li class="sub-li"><a href="#">Morelia, México</a></li>
+            <li class="sub-li"><a href="#">¿Quiénes somos?</a></li>
+            <li class="sub-li"><a href="#">Misión y visión</a></li>
+        </ul>
+    </div>
+  </footer>
+  <script src="js/api.js"></script>
+</body>
 </html>
