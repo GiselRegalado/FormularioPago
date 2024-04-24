@@ -62,3 +62,9 @@ function validarNumero(num) {
         else
             return false
     }
+if (isValid) {
+            window.location.href = 'https://giselregalado.github.io/DatosEnvio/';
+        } else {
+            // Si la validación falla, puedes mostrar un mensaje de error o hacer otra acción
+            alert('La validación falló. Inténtalo de nuevo.');
+        }
