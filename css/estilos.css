@@ -338,7 +338,7 @@ footer .listas a{
       flex-direction: column;
       line-height: 50px;
       transition: 0.2s;
-       width: 90%;   
+      width: 90%;   
       background-color: chocolate;
       position: absolute;
       left: 15px;
@@ -435,4 +435,3 @@ footer .listas a{
       text-align: center;
   }
 }
-
